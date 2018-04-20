@@ -1,14 +1,20 @@
 cmake_minimum_required(VERSION 3.3)
 
-project(server)
+project(serverx)
 
 list(
         APPEND HEADER_FILES
+        DmaData.h
+        DmaMasterApp.h
+        Socket.h
 )
 
 list(
         APPEND SOURCE_FILES
         main.cpp
+        DmaMasterApp.cpp
+        DmaData.cpp
+        Socket.cpp
 )
 
 set(ALL_SOURCE_FILES ${HEADER_FILES} ${SOURCE_FILES})

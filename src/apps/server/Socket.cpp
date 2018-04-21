@@ -9,11 +9,11 @@ Socket::~Socket()
 {
 
 }
-int Socket::TxData()
+int Socket::Tx()
 {
     return 0;
 }
-int Socket::RxData()
+int Socket::Rx()
 {
     return 0;
 }

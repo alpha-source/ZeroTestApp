@@ -1,14 +1,14 @@
 #include <string>
 #include <iostream>
 #include <unistd.h>
-
-#include "DmaMasterApp.h"
+#include <vector>
+#include "DMAManager.h"
 
 
 int main()
 {
-    DmaMasterAppRef dmaMasterAppRef = NULL;
-    dmaMasterAppRef->initServer();
-    dmaMasterAppRef->run(false);
+    DmaMasterAppRef dmaMasterApp  (new DMAManager());
+    dmaMasterApp->initServer();
+    dmaMasterApp->run(false);
     return 0;
 }

@@ -5,14 +5,14 @@ project(serverx)
 list(
         APPEND HEADER_FILES
         DmaData.h
-        DmaMasterApp.h
+        DMAManager.h
         Socket.h
 )
 
 list(
         APPEND SOURCE_FILES
         main.cpp
-        DmaMasterApp.cpp
+        DMAManager.cpp
         DmaData.cpp
         Socket.cpp
 )

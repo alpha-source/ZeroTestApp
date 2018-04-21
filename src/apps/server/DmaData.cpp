@@ -8,10 +8,11 @@ DmaData::DmaData()
 {
     this->_column = DMA_DATA_COLUMN_LENGTH;
     this->_row = DMA_DATA_ROW_LENGTH;
+    std::cout << "hello DmaData " << std::endl;
 }
 DmaData::~DmaData()
 {
-
+    std::cout << "bye DmaData " << std::endl;
 }
 int DmaData::get_row() const
 {
@@ -28,4 +29,20 @@ int DmaData::get_column() const
 void DmaData::set_column(int _column)
 {
     DmaData::_column = _column;
+}
+void DmaData::process()
+{
+
+}
+void DmaData::generate()
+{
+
+}
+void DmaData::format()
+{
+
+}
+void DmaData::packege()
+{
+
 }

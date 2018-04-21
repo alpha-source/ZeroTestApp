@@ -16,8 +16,8 @@ class Socket
 public:
     Socket();
     virtual ~Socket();
-    int TxData();
-    int RxData();
+    int Tx();
+    int Rx();
 };
 
 

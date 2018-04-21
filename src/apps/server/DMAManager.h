@@ -8,22 +8,19 @@
 #include "DmaData.h"
 #include "Socket.h"
 
-class DmaMasterApp;
-typedef std::shared_ptr<DmaMasterApp> DmaMasterAppRef;
+class DMAManager;
+typedef std::shared_ptr<DMAManager> DmaMasterAppRef;
 
-class DmaMasterApp
+class DMAManager : public DmaData, public Socket
 {
 public:
-    DmaMasterApp();
+    DMAManager();
     int initServer();
     void run(bool debug);
-    virtual ~DmaMasterApp();
+    virtual ~DMAManager();
 
 private:
-    DmaDataRef _dmaDataRef;
 
 
 };
-
-
 #endif //ZERO_DMAMASTERAPP_H

@@ -25,8 +25,12 @@ public:
     void set_row(int _row);
     int get_column() const;
     void set_column(int _column);
+    void process();
+    void generate();
+    void format();
+    void packege();
     virtual ~DmaData();
-private:
+protected:
     int _row, _column;
 
 };

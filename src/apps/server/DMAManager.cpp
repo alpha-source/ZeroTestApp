@@ -1,19 +1,26 @@
 #include "DMAManager.h"
 DMAManager::DMAManager()
 {
-   std::cout << "hello DMAManager " << std::endl;
+
 }
 int DMAManager::initServer()
 {
+    this->initDmaData();
+
+
     return 0;
 }
 void DMAManager::run(bool debug)
 {
-
+    this->Rx();
+    this->process();
+    this->generate();
+    this->format();
+    this->packege();
+    this->Tx();
+    this->demo();
 
 }
 DMAManager::~DMAManager()
 {
-
-    std::cout << "bye DMAManager " << std::endl;
 }

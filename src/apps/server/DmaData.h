@@ -11,7 +11,6 @@
 #define DMA_DATA_ROW_LENGTH 80
 #define DMA_DATA_COLUMN_LENGTH 780
 
-
 class DmaData;
 
 typedef std::shared_ptr<DmaData> DmaDataRef;
@@ -21,18 +20,22 @@ class DmaData
 
 public:
     DmaData();
-    int get_row() const;
-    void set_row(int _row);
-    int get_column() const;
-    void set_column(int _column);
+    virtual ~DmaData();
+protected:
+    unsigned int get_length() const;
+    void initDmaData();
     void process();
     void generate();
     void format();
     void packege();
-    virtual ~DmaData();
-protected:
-    int _row, _column;
+    unsigned char *get_pData() const;
+    void set_pData(unsigned char *_pData);
+    void demo();
 
+protected:
+    unsigned int _row, _column;
+    unsigned char * _pData;
+    unsigned int _length;
 };
 
 

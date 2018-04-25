@@ -19,6 +19,4 @@ public:
     int Tx();
     int Rx();
 };
-
-
 #endif //ZERO_SOCKET_H

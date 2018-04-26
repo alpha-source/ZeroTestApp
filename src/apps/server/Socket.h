@@ -13,7 +13,7 @@ typedef std::shared_ptr<Socket> SocketRef;
 
 class Socket
 {
-public:
+  public:
     Socket();
     virtual ~Socket();
     int Tx();

@@ -8,7 +8,7 @@ DmaData::DmaData()
 {
     this->_column = DMA_DATA_COLUMN_LENGTH;
     this->_row = DMA_DATA_ROW_LENGTH;
-
+    this->_length = this->_row * this->_column;
 }
 DmaData::~DmaData()
 {
@@ -16,23 +16,19 @@ DmaData::~DmaData()
 }
 void DmaData::process()
 {
-
 }
 void DmaData::generate()
 {
-    for (unsigned int i = 0; i < this->get_length(); i++) {
-        _pData[i] = (unsigned char) i;
-
+    for (unsigned int i = 0; i < this->get_length(); i++)
+    {
+        _pData[i] = (unsigned char)i;
     }
-
 }
 void DmaData::format()
 {
-
 }
 void DmaData::packege()
 {
-
 }
 void DmaData::initDmaData()
 {
@@ -48,14 +44,14 @@ void DmaData::set_pData(unsigned char *_pData)
 }
 unsigned int DmaData::get_length() const
 {
-    return (_row * _column);
+    return (this->_length);
 }
 void DmaData::demo()
 {
-    for (unsigned int i = 0; i < this->get_length(); i++) {
-        printf("%X ",_pData[i] );
+    for (unsigned int i = 0; i < this->get_length(); i++)
+    {
+        printf("%X ", _pData[i]);
     }
-    std::cout<<std::endl<<std::endl;
-
+    std::cout << std::endl
+              << std::endl;
 }
-
